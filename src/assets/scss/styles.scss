@@ -1,0 +1,101 @@
+// Overides
+body {
+
+	.container {
+
+		.row {
+
+			> * {
+				max-width: 800px;
+				margin-left: auto;
+				margin-right: auto;
+
+				.card {
+
+					.card-body {
+						@extend .px-5;
+						@extend .pt-3;
+
+						.alert.hide {
+							visibility: hidden;
+						}
+
+						.table-container {
+							@extend .pb-1;
+							height: auto;
+							transition: height 2s ease-in-out;
+						}
+
+						.table-container.hide {
+							height: 0;
+							overflow: hidden;
+						}
+
+						table.table {
+
+							> :not(:first-child) {
+								border-top-width: 0;
+							}
+
+							thead {
+								tr {
+									th {
+										text-align: left;
+										// border-bottom-width: 0;
+									}
+								}
+							}
+
+							tbody {
+								tr {
+									td {
+										text-align: left;
+
+										.btn {
+											
+											padding: 0 ;
+
+											> i.fa, i.fas, i.far, i.fal {
+												line-height: 1.5;
+												padding: 0.25rem 0.5rem;
+											}
+										}
+
+										.btn.btn-edit:hover {
+											color: #fff;
+											background-color: #000;
+										}
+
+										.btn.btn-delete {
+											color: #ff0000;
+										}
+
+										.btn.btn-delete:hover {
+											color: #fff;
+											background-color: #ff0000;
+										}
+									}
+								}
+							}
+						}
+
+						.btn#clear-btn {
+							@extend .px-5;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+// Import bootstrap sass files
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+//Import fontawesome sass files
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";

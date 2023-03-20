@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Noisemakers List App</title>
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+    <body style="background-color: rgba(0,0,0, 0.1);">
+
+        <main class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h4 class="my-5 text-primary">Noisemakers List App</h4>
+
+                    <div class="card mb-5">
+                        
+                        <div class="card-body">
+
+                            <div class="alert hide">
+                                Alert! 
+                            </div>
+
+                            <form id="form" method="get">
+                                
+                                <div class="input-group mb-3">
+                                    
+                                    <input type="text" name="item" value="" class="form-control" id="input" placeholder="eg. Joshua Musau">
+
+                                    <button class="btn btn-secondary" type="submit" id="submit-btn">
+                                        <i class="fas fa-plus"></i> 
+                                        Add
+                                    </button>
+                                    
+                                </div>
+                            </form>
+
+                            <div class="table-responsive table-container hide">
+                                
+                                <table class="table table-sm table-hover align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 1%;">
+                                                <input type="checkbox" class="form-check-input" id="checkall">
+                                            </th>
+                                            <th></th>
+                                            <th style="width: 15%;">Date</th>
+                                            <th style="width: 1%;"></th>
+                                            <th style="width: 1%;"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="list-container">
+                                        
+                                    </tbody>
+                                </table>
+
+                                <button id="clear-btn" type="button" class="btn btn-outline-danger">
+                                    <i class="fas fa-trash"></i> Clear Entire List
+                                </button>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </main>
+
+        <script src="assets/js/app.js"></script>
+        
+    </body>
+</html>
